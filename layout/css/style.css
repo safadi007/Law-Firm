@@ -1,0 +1,718 @@
+/* =====================================
+============ General Styleing ==========
+===================================== */
+/*=================================
+========= MDB SYTLING ROLE ========
+=================================*/
+.waves-effect {
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; }
+  .waves-effect .waves-ripple {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.2);
+    background: radial-gradient(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition: all 0.5s ease-out;
+    transform: scale(0) translate(0, 0); }
+  .waves-effect.waves-light .waves-ripple {
+    background: rgba(255, 255, 255, 0.4);
+    background: radial-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 70%); }
+  .waves-effect.waves-classic .waves-ripple {
+    background: rgba(0, 0, 0, 0.2); }
+  .waves-effect.waves-classic.waves-light .waves-ripple {
+    background: rgba(255, 255, 255, 0.4); }
+
+.waves-notransition {
+  transition: none !important; }
+
+.waves-button,
+.waves-circle {
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%); }
+
+.waves-button,
+.waves-button:hover,
+.waves-button:visited,
+.waves-button-input {
+  z-index: 1;
+  font-size: 1em;
+  line-height: 1em;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none; }
+
+.waves-button {
+  padding: .85em 1.1em;
+  border-radius: .2em; }
+
+.waves-button-input {
+  padding: .85em 1.1em;
+  margin: 0; }
+
+.waves-input-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: .2em; }
+  .waves-input-wrapper.waves-button {
+    padding: 0; }
+  .waves-input-wrapper .waves-button-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+.waves-circle {
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  border-radius: 50%; }
+
+.waves-float {
+  -webkit-mask-image: none;
+  box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, 0.12);
+  transition: all 300ms; }
+  .waves-float:active {
+    box-shadow: 0 8px 20px 1px rgba(0, 0, 0, 0.3); }
+
+.waves-block {
+  display: block; }
+
+a.waves-effect, a.waves-light {
+  display: inline-block; }
+@media (min-width: 600px) {
+	.navbar.scrolling-navbar {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		transition: background 0.5s ease-in-out, padding 0.8s ease-in-out; }
+	.navbar.scrolling-navbar .navbar-nav > li {
+		transition-duration: 1s; }
+	.navbar.scrolling-navbar.top-nav-collapse {
+		padding-top: 3px;
+		padding-bottom: 3px; } }
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.7.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2018 Daniel Eden
+ */
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  .animated.delay-1s {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .animated.delay-2s {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .animated.delay-3s {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s; }
+  .animated.delay-4s {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
+  .animated.delay-5s {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
+  .animated.fast {
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms; }
+  .animated.faster {
+    -webkit-animation-duration: 500ms;
+            animation-duration: 500ms; }
+  .animated.slow {
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s; }
+  .animated.slower {
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s; }
+
+@media (prefers-reduced-motion) {
+  .animated {
+    transition: none !important;
+    -webkit-animation: unset !important;
+            animation: unset !important; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn; }
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft; }
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight; }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp; }
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); } }
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); } }
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+          animation-name: fadeOutDown; }
+
+@-webkit-keyframes fadeOutLeft {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); } }
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); } }
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+          animation-name: fadeOutLeft; }
+
+@-webkit-keyframes fadeOutRight {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); } }
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+          animation-name: fadeOutRight; }
+
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); } }
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); } }
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+          animation-name: fadeOutUp; }
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.7.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2018 Daniel Eden
+ */
+/*
+=================================================
+========= End General MDB SYTLING ROLE ==========
+=================================================
+*/
+/* =====================================
+============= NAVBAR Styleing ==========
+===================================== */
+.bg-light {
+	background-color: #FFF !important;
+	padding: 0;
+
+}
+.scrolling-navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: box-shadow 0.5s ease-in-out ,padding 0.8s ease-in-out;
+}
+.navbar-brand img {
+	max-width: 6rem;
+}
+.navbar-nav {
+	margin-left: 6rem;
+}
+.fixed-top {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #000;
+	font-weight: 500;
+	padding-left: 0.8rem;
+	padding-right: 0.8rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	letter-spacing: 0.1rem;
+	transition: background 0.5s ease-in-out , color 0.5s ease-in-out;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #FFF;
+	background-color: #f7a349;
+}
+.navbar-light .navbar-nav .active>.nav-link{
+	color: #FFF;
+	background-color: #f7a349;
+}
+@media (max-width: 1200px) {
+	.navbar-light .navbar-nav .nav-link {
+		font-size: 0.8rem;
+	}
+}
+@media (max-width:767px) {
+	.navbar-brand{
+		margin: auto;
+	}
+	.navbar-brand img {
+		max-width: 4rem;
+	}
+	.navbar-nav {
+		margin-left: 0;
+	}
+	.navbar-nav .nav-item {
+		margin-top: 0.2rem;
+	}
+}
+/* =====================================
+============= IMAGE Styleing ===========
+===================================== */
+.image{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,  url("../img/slider.jpg");
+	margin-bottom: 2rem;
+}
+.sliderText{
+	color: rgba(255,255,255,0.8	);
+	text-align: end;
+	padding-top: 10rem;
+	padding-bottom: 12rem;
+	letter-spacing: 0.1rem;
+}
+.sliderText .make {
+	display: inline-block;
+	margin-top: 3rem;
+	padding: 0.5rem 2rem;
+	background-color: #f7a349;
+	font-weight: 500;
+}
+.sliderText .make:hover{
+	cursor: pointer;
+}
+@media (max-width:767px) {
+	.image{
+		background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,  url("../img/slider-1.jpg");
+		margin-bottom: 2rem;
+	}
+	.sliderText{
+		text-align: left;
+		font-size: 1.5rem;
+		padding-top: 22rem;
+		padding-bottom: 6rem;
+	}
+	.sliderText .make {
+		font-size: 0.9rem;
+	}
+}
+/* =====================================
+============= STUFF Styleing ===========
+===================================== */
+.ourStuff{
+	padding: 2rem 0;
+}
+.freeConsultation {
+	background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,  url("../img/freeconsultation.jpg")  ;
+	padding: 1rem;
+}
+.freeConsultation label:nth-of-type(1) {
+	display: block;
+	color: #FFF;
+	font-weight: 500;
+	font-size: 14px;
+}
+.freeConsultation label:nth-of-type(2) {
+	display: block;
+	color:  #f7a349;
+	font-weight: 500;
+	font-size: 14px;
+	margin-bottom: 1rem;
+}
+.freeConsultation input {
+	display: block;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	border: 0.5px solid rgba(255,255,255,0.2);
+	margin-bottom: 1rem;
+	color: #FFF;
+}
+.freeConsultation input[type=text]:nth-of-type(4){
+	height: 5rem;
+	margin-bottom: 2rem;
+}
+.freeConsultation input[type=submit]{
+	padding: 0.5rem;
+	background-color: #f7a349;
+	font-weight: 500;
+	width: 5rem;
+	border: none;
+	color: #FFF;
+	text-transform: uppercase;
+}
+::placeholder{
+	color: rgba(255,255,255,0.5);
+	text-align: left;
+	padding-left: 1rem;
+	text-transform: uppercase;
+}
+.ourStuff .row:first-of-type {
+	justify-content: center;
+}
+.stuff .person{
+	padding-top: 2rem;
+	text-align: center;
+}
+.stuff .person img {
+	width: 80%;
+	height: 80%;
+	border-radius: 1rem;
+}
+.stuff .person h6{
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	margin-top: 0.5rem;
+}
+.stuff .person p{
+	font-size: 12px;
+	text-align: justify;
+	color: rgba(0,0,0,0.5)
+}
+/* =====================================
+=========== Counter Styleing ===========
+===================================== */
+.counter{
+	padding: 2rem 0 ;
+}
+.counter .item {
+	padding : 1rem;
+	text-align: center;
+}
+.counter .item span:nth-of-type(1){
+	color: rgba(247, 163, 73, 0.4);
+	display: block;
+}
+.counter .item span:nth-of-type(2){
+	display:block;
+    font-size: 3rem;
+	letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+.counter .item span:nth-of-type(3){
+	display: block;
+	font-weight: 400;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+.counter .item hr {
+	border: 0.8px solid rgba(247, 163, 73, 0.5);
+}
+/* =====================================
+========== practice Styleing ===========
+===================================== */
+.practiceArea {
+	padding: 2rem 0;
+}
+.practiceArea .text h6 {
+	color: rgba(0,0,0,0.4);
+	margin-bottom: 0;
+}
+.practiceArea .text h1{
+	font-weight: bolder;
+	font-size: 1.5rem;
+}
+.practiceArea .text h1 span {
+	color: rgba(247, 163, 73, 0.8);
+}
+.practiceArea .text p {
+	color: rgba(0,0,0,0.5);
+	max-width: 70%;
+}
+.practiceArea .area {
+	padding: 1rem;
+}
+.practiceArea .area .areaImage{
+	color: rgba(247, 163, 73, 0.8);
+}
+.practiceArea .area .areaImage img {
+	width: 100%;
+	border-radius: 1rem;
+}
+.practiceArea .area .areaText h3{
+	font-size: 1.2rem;
+	margin: 1rem 0;
+}
+.practiceArea .area .areaText span {
+	color: rgba(0,0,0,0.3);
+	display: block;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+.practiceArea .area .areaText p{
+	font-size: 0.8rem;
+	text-align: justify;
+}
+@media (max-width: 1200px) {
+	.practiceArea .area {
+		text-align: center;
+	}
+}
+@media (max-width:767px) {
+	.practiceArea .area {
+		text-align: center;
+	}
+}
+/* =====================================
+=========== banner Styleing ============
+===================================== */
+.banner{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,  url("../img/justice-banner.jpg")  ;
+	text-align: center;
+	color: #FFF;
+	padding: 15rem 0;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+.banner span {
+	color: rgba(247, 163, 73, 1);
+}
+@media (max-width:767px) {
+	.banner{
+		background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,  url("../img/banner-1.jpg")  ;
+		text-align: left;
+		color: #FFF;
+		padding: 12rem 0;
+		letter-spacing: 0.1rem;
+	}
+}
+/* =====================================
+========= latestNews Styleing ==========
+===================================== */
+#latestNews{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)) ,  url("../img/latestnews.jpg")  ;
+	padding-bottom: 1rem;
+}
+#latestNews p , #latestNews h6 ,#latestNews h1  ,#latestNews h3 ,#latestNews .areaText span {
+	color: rgba(255, 255, 255, 0.8);
+}
+#latestNews p {
+	margin-bottom: 0.2rem;
+}
+#latestNews .area span:last-child {
+	background-color: rgba(247, 163, 73, 0.8);
+	margin-top: 0.5rem;
+	font-size: 12px;
+	padding: 0.5rem 2rem;
+	font-weight: 600;
+	color: #FFF;
+}
+@media (max-width:768px) {
+	#latestNews .areaText h3 {
+		font-size: 0.9rem;
+	}
+}
+/* =====================================
+============ FOOTER Styleing ===========
+===================================== */
+.footer{
+	padding: 2rem;
+	background-color:#FFF;
+	color: #000;
+}
+.footer	 h4 {
+	padding: 0.5rem;
+	background-color:  rgba(247, 163, 73, 0.8);
+	color: #FFF;
+	width: 100%;
+	border-radius: 0.5rem;
+}
+.footer p {
+	text-align: justify;
+	margin: 1rem 0.5rem 0 0.5rem;
+	color: rgba(0,0,0,0.5);
+	line-height: 2.5;
+}
+.footer span {
+	display: block;
+	width: 100%;
+	margin-left: 2rem;
+	font-size: 1.2rem;
+	color: rgba(0, 0, 0, 0.5);
+	margin-bottom: 0.5rem;
+}
+.footer .callUs div:nth-child(2) span:nth-child(1):hover{
+	cursor: pointer;
+	color: #4267B2;
+}
+.footer .callUs div:nth-child(2) span:nth-child(2):hover{
+	cursor: pointer;
+	color: #00acee;
+}
+.footer .callUs div:nth-child(2) span:nth-child(3):hover{
+	cursor: pointer;
+	color: #833AB4;
+}
+.footer iframe{
+	width: 100%;
+	height: 80%;
+	border: 1px solid rgba(247, 163, 73, 0.8) ;
+	border-radius: 0.5rem;
+}
+@media (max-width:768px) {
+	.footer .aboutUs , .footer .location {
+		margin-bottom: 2rem;
+	}
+}
